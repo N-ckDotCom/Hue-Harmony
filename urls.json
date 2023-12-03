@@ -1,0 +1,35 @@
+[
+    {
+        "url": "youtube.com",
+        "theme": {
+            "colors": {
+                "toolbar": "#ffffff",
+                "toolbar_bottom_separator": "#ffffff",
+                "toolbar_field_border": "#cccccc",
+                "toolbar_field": "#ffffff",
+                "toolbar_field_text": "#0f0f0f",
+                "tab_selected": "#ffffff",
+                "tab_background_text": "#0f0f0f",
+                "frame":"#ffffff"
+            }
+        },
+        "darkMode": false
+    },
+    {
+        "url": "youtube.com",
+        "theme": {
+            "colors": {
+                "toolbar": "#0f0f0f",
+                "toolbar_bottom_separator": "#0f0f0f",
+                "toolbar_field_border": "#303030",
+                "toolbar_field": "#0f0f0f",
+                "toolbar_field_text": "#f1f1f1",
+                "tab_selected": "#0f0f0f",
+                "tab_background_text": "#f1f1f1",
+                "frame":"#0f0f0f"
+
+            }
+        },
+        "darkMode": true
+    }
+]
