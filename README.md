@@ -1,7 +1,7 @@
 # Hue Harmony
 
 <div align="center">
-  <img src="icons/icon.svg" alt="Extension Logo" width="300px">
+  <img src="images/icon.svg" alt="Extension Logo" width="300px">
 </div>
 
 ## Overview
