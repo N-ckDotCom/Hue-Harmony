@@ -13,8 +13,7 @@ The HueHarmony Firefox extension, tweaks theme colors based on your current tab,
 ## Features
 
 - **Dynamic Color Changes:** 🌈 The extension adjusts the theme colors according to the content of the current tab.
-- **Custom URL Styles:** 🎨 Users can define custom styles for specific URLs by editing the JSON configuration file.
-- **Easy to Use:** 🚀 Seamless integration with Firefox, providing a hassle-free experience for users.
+- **Custom URL Styles:** 🎨 You can define custom styles for specific URLs by editing the JSON configuration file.
 
 
 
@@ -30,7 +29,7 @@ git clone https://github.com/N-ckDotCom/Hue-Harmony
 
 3. Click on "This Firefox" in the left sidebar.
 
-4. Click on "Load Temporary Add-on" and select any file in your extension's directory.
+4. Click on "Load Temporary Add-on" and select any file in the Hue-Harmony directory.
 
 5. The extension is now loaded temporarily, and you can start using it.
 
@@ -39,8 +38,6 @@ git clone https://github.com/N-ckDotCom/Hue-Harmony
 1. Open a new tab or navigate to a website.
 
 2. Witness the theme colors changing dynamically based on the tab.
-
-3. Customize the extension settings by editing `urls.json`.
 
 ## License
 
