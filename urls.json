@@ -31,5 +31,35 @@
             }
         },
         "darkMode": true
+    },
+    {
+        "url": "claude.ai",
+        "theme": {
+            "colors": {
+                "toolbar": "#f1efe6",
+                "toolbar_bottom_separator": "#f1efe6",
+                "toolbar_field_border": "#dfd6c8",
+                "toolbar_field": "#f1efe6",
+                "toolbar_field_text": "#3d3929",
+                "tab_selected": "#f1efe6",
+                "tab_background_text": "#3d3929",
+                "frame":"#f1efe6"
+            }
+        }
+    },
+    {
+        "url": "babylonjs.com",
+        "theme": {
+            "colors": {
+                "toolbar": "#201936",
+                "toolbar_bottom_separator": "#201936",
+                "toolbar_field_border": "#bb464b",
+                "toolbar_field": "#201936",
+                "toolbar_field_text": "#e2e2e2",
+                "tab_selected": "#201936",
+                "tab_background_text": "#e2e2e2",
+                "frame":"#201936"
+            }
+        }
     }
 ]

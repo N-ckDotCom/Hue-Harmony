@@ -1,4 +1,4 @@
-// Color Utils
+// - Color Utils -
 
 /**
  * Converts an RGB color string to an RGB array
@@ -111,10 +111,21 @@ async function fetchData() {
  */
 async function handleTab(tabId, tabInfo) {
 
+  if ((tabInfo.url === null || tabInfo.url === undefined || tabInfo.url.startsWith("about:"))) {
+    const isDark = await isDarkTheme();
+    if (isDark) {
+      setColor("#2b2a33");
+      return;
+    }
+    else {
+      setColor("#f9f9fb");
+      return;
+    }
+  }
+
   try {
 
     const theme = await matchUrl(tabInfo.url);
-
     if (!theme) {
 
       browser.tabs.executeScript(tabId, { code: 'window.getComputedStyle(document.body).backgroundColor' })
@@ -134,8 +145,6 @@ async function handleTab(tabId, tabInfo) {
     }
     else {
       console.log(theme);
-
-      // Access Firefox API
       browser.theme.update(theme);
     }
 
@@ -151,8 +160,8 @@ async function handleTab(tabId, tabInfo) {
  * @returns {Object|boolean} The matched theme data object or false if no match
 */
 async function matchUrl(url) {
-  const setting = await browser.browserSettings.overrideContentColorScheme.get({})
-  const theme = setting.value === "dark";
+  const isDark = await isDarkTheme();
+
   const data = await fetchData();
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
@@ -160,7 +169,8 @@ async function matchUrl(url) {
       if (element.darkMode === null || element.darkMode === undefined) {
         return element.theme;
       }
-      if (element.darkMode == theme) {
+      if (element.darkMode == isDark) {
+
         return element.theme;
 
       }
@@ -169,6 +179,12 @@ async function matchUrl(url) {
 
   }
   return false;
+}
+
+async function isDarkTheme() {
+  const setting = await browser.browserSettings.overrideContentColorScheme.get({})
+  return (setting.value === "dark");
+
 }
 
 /**
@@ -183,9 +199,7 @@ function updateToolbarColor(tabId) {
     });
 }
 
-
-
-
+// - Listeners -
 
 // Listen for tab switch events
 browser.tabs.onActivated.addListener(activeInfo => {
@@ -195,8 +209,9 @@ browser.tabs.onActivated.addListener(activeInfo => {
 // Listen for tab update events
 browser.tabs.onUpdated.addListener(
   (tabId, changeInfo, tabInfo) => {
-    if ((changeInfo.url === null || changeInfo.url === undefined)) return;
+
     updateToolbarColor(tabId);
+
   });
 
 // Listen for initial tab load
