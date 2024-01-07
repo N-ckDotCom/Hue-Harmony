@@ -6,10 +6,11 @@
     "permissions": ["activeTab","theme","tabs","<all_urls>","browserSettings"],
     "icons": {
       "48": "images/icon.svg"},
-    },
+    
     "background": {
       "scripts": ["background.js"],
       "persistent": false
     }
   }
+
   
