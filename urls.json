@@ -48,6 +48,21 @@
         }
     },
     {
+        "url": "vscode.dev",
+        "theme": {
+            "colors": {
+                "toolbar": "#181818",
+                "toolbar_bottom_separator": "#181818",
+                "toolbar_field_border": "#404040",
+                "toolbar_field": "#181818",
+                "toolbar_field_text": "#d7d7d7",
+                "tab_selected": "#181818",
+                "tab_background_text": "#d7d7d7",
+                "frame":"#181818"
+            }
+        }
+    },
+    {
         "url": "babylonjs.com",
         "theme": {
             "colors": {
